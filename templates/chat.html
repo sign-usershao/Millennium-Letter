@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+千年回信
+</title>
+
+
+<link rel="stylesheet" href="/static/style.css">
+
+
+</head>
+
+
+<body>
+
+
+<div class="chat-page">
+
+
+<div class="chat-title">
+
+
+<h1>
+千年回信
+</h1>
+
+
+<p>
+李白
+</p>
+
+
+</div>
+
+
+
+<div class="letter">
+
+
+{% if question %}
+
+
+<div class="user-message">
+
+你：
+
+{{question}}
+
+</div>
+
+
+
+<div class="libai-message">
+
+李白：
+
+<br>
+
+{{reply}}
+
+</div>
+
+
+{% endif %}
+
+
+
+</div>
+
+
+
+
+<form action="/chat" method="post">
+
+
+<div class="input-area">
+
+
+<input
+
+name="message"
+
+placeholder="写下一句话..."
+
+>
+
+
+<button>
+
+寄出
+
+</button>
+
+
+</div>
+
+
+</form>
+
+
+
+</div>
+
+
+
+</body>
+
+
+</html>
